@@ -64,11 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="CreditCard.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trabajo.cs" />
     <Compile Include="Trabajo_Persona.cs" />
+=======
+    <Compile Include="Gastos.cs" />
+    <Compile Include="OtrosIngresos.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenciaBancaria.cs" />
+>>>>>>> fea34bcebecd523e573bb22934cfa82ae05f8ec9
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
