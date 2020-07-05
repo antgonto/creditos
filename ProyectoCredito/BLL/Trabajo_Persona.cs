@@ -12,6 +12,7 @@ namespace BLL
 {
     public class Trabajo_Persona
     {
+        #region
         private int _Cod_Trabajo;
         public int Cod_Trabajo
         {

@@ -13,6 +13,7 @@ namespace BLL
 {
     public class CreditCard
     {
+#region
         private int _Cod_CreditCard;
         public int Cod_CreditCard
         {

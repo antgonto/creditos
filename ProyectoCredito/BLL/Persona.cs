@@ -98,7 +98,7 @@ namespace BLL
         public string canton
         {
             get { return _canton; }
-            set { _canton= value; }
+            set { _canton = value; }
         }
         private string _distrito;
         public string distrito
@@ -150,7 +150,7 @@ namespace BLL
         #endregion
 
         #region metodos
-        public string carga_Persona(int id,string accion)
+        public string carga_Persona(int id, string accion)
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
             if (conexion == null)
@@ -183,7 +183,7 @@ namespace BLL
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
             if (conexion == null)
             {
-                 return false;
+                return false;
             }
             else
             {
@@ -192,10 +192,10 @@ namespace BLL
                     sql = "Insertar_Persona";
                 }
                 ParamStruct[] parametros = new ParamStruct[17];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Id_Persona", SqlDbType.Int, _idPersona );
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Id_Persona", SqlDbType.Int, _idPersona);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nom1_Persona", SqlDbType.VarChar, _nombre1);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Nom2_Persona", SqlDbType.VarChar,_nombre2 );
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Apell1_Persona", SqlDbType.VarChar, _apellido1 );
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Nom2_Persona", SqlDbType.VarChar, _nombre2);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Apell1_Persona", SqlDbType.VarChar, _apellido1);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Apell2_Persona", SqlDbType.VarChar, _apellido2);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@EstadoCivil_Persona", SqlDbType.VarChar, _estadoCivil);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Tel1_Persona", SqlDbType.Int, _telefono1);
@@ -207,7 +207,7 @@ namespace BLL
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 12, "@Distrito_Persona", SqlDbType.VarChar, _distrito);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 13, "@Dirección_Persona", SqlDbType.VarChar, _direccion);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 14, "@Clave_Persona", SqlDbType.VarChar, _clave);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 15, "@Cod_Tipo_Per", SqlDbType.Int, _codTipoPersona );
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 15, "@Cod_Tipo_Per", SqlDbType.Int, _codTipoPersona);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 16, "@Id_Conyuge", SqlDbType.Int, _id_conyuge);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
@@ -261,7 +261,7 @@ namespace BLL
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
             if (conexion == null)
-            {              
+            {
                 return false;
             }
             else
@@ -293,7 +293,7 @@ namespace BLL
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
-                {                
+                {
                     cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
                     return false;
                 }

@@ -65,8 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreditCard.cs" />
+    <Compile Include="Gastos.cs" />
+    <Compile Include="OtrosIngresos.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenciaBancaria.cs" />
     <Compile Include="Trabajo.cs" />
     <Compile Include="Trabajo_Persona.cs" />
   </ItemGroup>
