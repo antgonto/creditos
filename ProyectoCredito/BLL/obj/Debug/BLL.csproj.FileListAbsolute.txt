@@ -101,14 +101,3 @@ C:\Users\karla\Desktop\ExperienciaProfesional\ProyectoCredito\BLL\bin\Debug\Newt
 C:\Users\karla\Desktop\ExperienciaProfesional\ProyectoCredito\BLL\bin\Debug\DAL.pdb
 C:\Users\karla\Desktop\ExperienciaProfesional\ProyectoCredito\BLL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\karla\Desktop\ExperienciaProfesional\ProyectoCredito\BLL\obj\Debug\BLL.csproj.CopyComplete
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\obj\Debug\BLL.dll
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\obj\Debug\BLL.pdb
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\BLL.dll
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\BLL.pdb
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\DAL.dll
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\Newtonsoft.Json.dll
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\DAL.pdb
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\bin\Debug\Newtonsoft.Json.xml
-C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\BLL\obj\Debug\BLL.csproj.CopyComplete
