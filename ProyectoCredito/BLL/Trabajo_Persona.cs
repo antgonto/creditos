@@ -64,7 +64,7 @@ namespace BLL
         #endregion
 
         #region metodos
-        public string carga_Trabajo_Persona(int id, string accion)
+        public string carga_Trabajo_Persona(int id)
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
             if (conexion == null)
@@ -73,15 +73,12 @@ namespace BLL
             }
             else
             {
-                sql = "Ver_Trabajo";
-                ParamStruct[] parametros = new ParamStruct[2];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, Cod_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@accion", SqlDbType.VarChar, accion);
+                sql = "[Ver_Trabajo_Persona]";
+                ParamStruct[] parametros = new ParamStruct[1];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@id_Persona", SqlDbType.Int, id);
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
-                    //insertar en la table de errores
-                    //HttpContext.Current.Response.Redirect("Error.aspx?error=" + numero_error.ToString() + "&men=" + mensaje_error);
                     return null;
                 }
                 else
@@ -91,8 +88,6 @@ namespace BLL
             }
 
         }
-
-
         public bool agregar_trabajo_persona(string accion)
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);

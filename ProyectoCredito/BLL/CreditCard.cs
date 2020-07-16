@@ -65,7 +65,7 @@ namespace BLL
         #endregion
 
         #region metodos
-        public string carga_CreditCard(int id, string accion)
+        public string carga_CreditCard(int id)
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
             if (conexion == null)
@@ -74,15 +74,12 @@ namespace BLL
             }
             else
             {
-                sql = "Ver_Trabajo";
-                ParamStruct[] parametros = new ParamStruct[2];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_CreditCard", SqlDbType.Int, Cod_CreditCard);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@accion", SqlDbType.VarChar, accion);
+                sql = "[Ver_CreditCard]";
+                ParamStruct[] parametros = new ParamStruct[1];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_CreditCard", SqlDbType.Int, id);
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
-                    //insertar en la table de errores
-                    //HttpContext.Current.Response.Redirect("Error.aspx?error=" + numero_error.ToString() + "&men=" + mensaje_error);
                     return null;
                 }
                 else
@@ -92,7 +89,6 @@ namespace BLL
             }
 
         }
-
 
         public bool agregar_creditcard(string accion)
         {
