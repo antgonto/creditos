@@ -73,7 +73,6 @@ C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\bin\Debug\DAL.dll
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\bin\Debug\DAL.pdb
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\bin\Debug\Newtonsoft.Json.xml
-C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\lem-9\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.dll

@@ -14,15 +14,10 @@ namespace BLL
     public class Trabajo
     {
         #region
-        private int _Cod_Trabajo;
-        public int Cod_Trabajo
-        {
-            get { return _Cod_Trabajo; }
-            set { _Cod_Trabajo = value; }
-        }
+        
 
-        private int _Nom_Trabajo;
-        public int Nom_Trabajo
+        private string _Nom_Trabajo;
+        public string Nom_Trabajo
         {
             get { return _Nom_Trabajo; }
             set { _Nom_Trabajo = value; }
@@ -54,11 +49,11 @@ namespace BLL
             set { _Distrito_Trabajo = value; }
         }
 
-        private string _Direccion_Trabajo;
-        public string Direccion_Trabajo
+        private string _Dirección_Trabajo;
+        public string Dirección_Trabajo
         {
-            get { return _Direccion_Trabajo; }
-            set { _Direccion_Trabajo = value; }
+            get { return _Dirección_Trabajo; }
+            set { _Dirección_Trabajo = value; }
         }
 
         private int _Tel_Trabajo;
@@ -68,19 +63,21 @@ namespace BLL
             set { _Tel_Trabajo = value; }
         }
 
-        private int _Email_Trabajo;
-        public int Email_Trabajo
+        private string _Email_Trabajo;
+        public string Email_Trabajo
         {
             get { return _Email_Trabajo; }
             set { _Email_Trabajo = value; }
         }
 
-        private string _CodPostal_Trabajo;
-        public string CodPostal_Trabajo
+        private int _CodPostal_Trabajo;
+        public int CodPostal_Trabajo
         {
             get { return _CodPostal_Trabajo; }
             set { _CodPostal_Trabajo = value; }
         }
+
+       
 
         private string _accion;
         public string accion
@@ -139,17 +136,16 @@ namespace BLL
                 {
                     sql = "Insertar_Trabajo";
                 }
-                ParamStruct[] parametros = new ParamStruct[10];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, _Cod_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Dirección_Trabajo", SqlDbType.VarChar, _Direccion_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@CodPostal_Trabajo", SqlDbType.VarChar, _CodPostal_Trabajo);
+                ParamStruct[] parametros = new ParamStruct[9];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Dirección_Trabajo", SqlDbType.VarChar, _Dirección_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@CodPostal_Trabajo", SqlDbType.Int, _CodPostal_Trabajo);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
@@ -211,17 +207,16 @@ namespace BLL
                 {
                     sql = "Modificar_Trabajo";
                 }
-                ParamStruct[] parametros = new ParamStruct[10];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, _Cod_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Dirección_Trabajo", SqlDbType.VarChar, _Direccion_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@CodPostal_Trabajo", SqlDbType.VarChar, _CodPostal_Trabajo);
+                ParamStruct[] parametros = new ParamStruct[9];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Dirección_Trabajo", SqlDbType.VarChar, _Dirección_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@CodPostal_Trabajo", SqlDbType.Int, _CodPostal_Trabajo);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)

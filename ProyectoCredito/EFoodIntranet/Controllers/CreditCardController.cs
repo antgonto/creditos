@@ -20,15 +20,15 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] CreditCard creditCard)
         {
-            return creditCard.agregar_creditcard("Insertar") ? " Se guardaron los gastos" : "No se guardaron los gastos.";
+            return creditCard.agregar_creditcard("Insertar") ? " Se guardo la tarjeta" : "No se guardo tarjeta.";
 
         }
 
         //PUT api/values/5      
         public string Put(string id, [FromBody] CreditCard creditcard)
         {
-            return creditcard.modificarCreditCard("Actualizar") ? "Se actualizaron los gastos" :
-               "No se actualizaron los gastos";
+            return creditcard.modificarCreditCard("Actualizar") ? "Se actualizo la tarjeta" :
+               "No se actualizo la tarjeta";
         }
 
     }
