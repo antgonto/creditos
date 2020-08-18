@@ -165,6 +165,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CreditCardController.cs" />
     <Compile Include="Controllers\GastosController.cs" />
+    <Compile Include="Controllers\GestionFormularioController.cs" />
     <Compile Include="Controllers\OtrosIngresosController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

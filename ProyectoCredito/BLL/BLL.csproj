@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="CreditCard.cs" />
     <Compile Include="Gastos.cs" />
+    <Compile Include="GestionFormulario.cs" />
     <Compile Include="OtrosIngresos.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
