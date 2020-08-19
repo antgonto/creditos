@@ -115,7 +115,7 @@ namespace BLL
                     sql = "Insertar_ReferBancar";
                 }
                 ParamStruct[] parametros = new ParamStruct[8];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@NomInst_ReferBan", SqlDbType.VarChar, _NomInst_ReferBan);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@NomIns", SqlDbType.VarChar, _NomInst_ReferBan);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@CuentaCorriente_ReferBan", SqlDbType.Int, _CuentaCorriente_ReferBan);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@CajaAhorros_ReferBan", SqlDbType.Decimal, _CajaAhorros_ReferBan);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Prestamo_ReferBan", SqlDbType.Decimal, _Prestamo_ReferBan);
