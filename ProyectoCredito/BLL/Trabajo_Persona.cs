@@ -75,7 +75,7 @@ namespace BLL
             {
                 sql = "[Ver_Trabajo_Persona]";
                 ParamStruct[] parametros = new ParamStruct[1];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@id_Persona", SqlDbType.Int, id);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, id);
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
@@ -101,12 +101,11 @@ namespace BLL
                 {
                     sql = "Insertar_Trabajo_Persona";
                 }
-                ParamStruct[] parametros = new ParamStruct[5];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, _Cod_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Id_Persona", SqlDbType.Int, _Id_Persona);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@SueldoMen_Trabajo", SqlDbType.Int, _SueldoMen_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@FechaIngrso_Trabajo", SqlDbType.Date, _FechaIngrso_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Puesto_Trabajo", SqlDbType.VarChar, _Puesto_Trabajo);
+                ParamStruct[] parametros = new ParamStruct[4];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Id_Persona", SqlDbType.Int, _Id_Persona);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@SueldoMen_Trabajo", SqlDbType.Int, _SueldoMen_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@FechaIngrso_Trabajo", SqlDbType.Date, _FechaIngrso_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Puesto_Trabajo", SqlDbType.VarChar, _Puesto_Trabajo);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
@@ -168,12 +167,11 @@ namespace BLL
                 {
                     sql = "Modificar_Trabajo_Persona";
                 }
-                ParamStruct[] parametros = new ParamStruct[5];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, _Cod_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Id_Persona", SqlDbType.Int, _Id_Persona);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@SueldoMen_Trabajo", SqlDbType.Int, _SueldoMen_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@FechaIngrso_Trabajo", SqlDbType.Date, _FechaIngrso_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Puesto_Trabajo", SqlDbType.VarChar, _Puesto_Trabajo);
+                ParamStruct[] parametros = new ParamStruct[4];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Id_Persona", SqlDbType.Int, _Id_Persona);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@SueldoMen_Trabajo", SqlDbType.Int, _SueldoMen_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@FechaIngrso_Trabajo", SqlDbType.Date, _FechaIngrso_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Puesto_Trabajo", SqlDbType.VarChar, _Puesto_Trabajo);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
