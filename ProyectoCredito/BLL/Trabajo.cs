@@ -14,7 +14,13 @@ namespace BLL
     public class Trabajo
     {
         #region
-        
+
+        private int _Cod_Trabajo;
+        public int Cod_Trabajo
+        {
+            get { return _Cod_Trabajo; }
+            set { _Cod_Trabajo = value; }
+        }
 
         private string _Nom_Trabajo;
         public string Nom_Trabajo
@@ -75,15 +81,6 @@ namespace BLL
         {
             get { return _CodPostal_Trabajo; }
             set { _CodPostal_Trabajo = value; }
-        }
-
-       
-
-        private string _accion;
-        public string accion
-        {
-            get { return _accion; }
-            set { _accion = value; }
         }
 
 
@@ -162,38 +159,7 @@ namespace BLL
                 }
             }
         }
-
-        //public bool eliminar_producto(string cod_planta)
-        //{
-        //    conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
-        //    if (conexion == null)
-        //    {
-        //        //insertar en la table de errores
-        //        //HttpContext.Current.Response.Redirect("Error.aspx?error=" + numero_error.ToString() + "&men=" + mensaje_error);
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        sql = "stp_producto_eliminar";
-        //        ParamStruct[] parametros = new ParamStruct[2];
-        //        cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@cod_prod", SqlDbType.VarChar, _cod_prod);
-        //        cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@usuario_ejecutor", SqlDbType.VarChar, _usuario_nom_usu);
-        //        cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
-        //        cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
-        //        if (numero_error != 0)
-        //        {
-        //            //insertar en la table de errores
-        //         //   HttpContext.Current.Response.Redirect("Error.aspx?error=" + numero_error.ToString() + "&men=" + mensaje_error);
-        //            cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
-        //            return false;
-        //        }
-        //        else
-        //        {
-        //            cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
-        //            return true;
-        //        }
-        //    }
-        //}
+       
         public bool modificarTrabajo(string accion)
         {
             conexion = cls_DAL.trae_conexion("Progra5", ref mensaje_error, ref numero_error);
@@ -207,16 +173,17 @@ namespace BLL
                 {
                     sql = "Modificar_Trabajo";
                 }
-                ParamStruct[] parametros = new ParamStruct[9];
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Dirección_Trabajo", SqlDbType.VarChar, _Dirección_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@CodPostal_Trabajo", SqlDbType.Int, _CodPostal_Trabajo);
+                ParamStruct[] parametros = new ParamStruct[10];
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Trabajo", SqlDbType.Int, _Cod_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nom_Trabajo", SqlDbType.VarChar, _Nom_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Lugar_Trabajo", SqlDbType.VarChar, _Lugar_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Provincia_Trabajo", SqlDbType.VarChar, _Provincia_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Canton_Trabajo", SqlDbType.VarChar, _Canton_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Distrito_Trabajo", SqlDbType.VarChar, _Distrito_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Dirección_Trabajo", SqlDbType.VarChar, _Dirección_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Tel_Trabajo", SqlDbType.Int, _Tel_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Email_Trabajo", SqlDbType.VarChar, _Email_Trabajo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 9, "@CodPostal_Trabajo", SqlDbType.Int, _CodPostal_Trabajo);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
                 cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)

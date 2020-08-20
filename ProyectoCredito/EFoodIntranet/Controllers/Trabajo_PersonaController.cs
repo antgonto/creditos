@@ -20,15 +20,15 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] Trabajo_Persona trabajo_persona)
         {
-            return trabajo_persona.agregar_trabajo_persona("Insertar") ? " Se guardaron los gastos" : "No se guardaron los gastos.";
+            return trabajo_persona.agregar_trabajo_persona("Insertar") ? " Se guardó el trabajo para esa persona" : "No se guardó el trabajo para esa persona.";
 
         }
 
         //PUT api/values/5      
         public string Put(string id, [FromBody] Trabajo_Persona trabajo_persona)
         {
-            return trabajo_persona.modificarTrabajoPersona("Actualizar") ? "Se actualizaron los gastos" :
-               "No se actualizaron los gastos";
+            return trabajo_persona.modificarTrabajoPersona("Actualizar") ? "Se actualizó el trabajo de la persona" :
+               "No se actualizó el trabajo de la persona";
         }
 
     }

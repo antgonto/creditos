@@ -85,3 +85,4 @@ C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.cspro
 C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.dll
 C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.pdb
+C:\Users\karla\Documents\GitHub\creditos\ProyectoCredito\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
