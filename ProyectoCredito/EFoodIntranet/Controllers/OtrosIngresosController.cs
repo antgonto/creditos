@@ -19,7 +19,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] OtrosIngresos ingresos)
         {
-            return ingresos.agregar_OtrosIngresos("Insertar") ? " Se guardaron los ingresos" : "No se guardaron los ingresos.";
+            return ingresos.agregar_OtrosIngresos("Insertar") ? "Se guardaron los ingresos" : "No se guardaron los ingresos.";
 
         }
 

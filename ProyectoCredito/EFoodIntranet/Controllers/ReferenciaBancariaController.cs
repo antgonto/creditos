@@ -19,7 +19,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] ReferenciaBancaria referencia)
         {
-            return referencia.agregar_ReferenciaBancaria("Insertar") ? " Se guardó la referencia bancaria" : "No se guardaron los cambios a referencia bancaria.";
+            return referencia.agregar_ReferenciaBancaria("Insertar") ? "Se guardó la referencia bancaria" : "No se guardaron los cambios a referencia bancaria.";
 
         }
 

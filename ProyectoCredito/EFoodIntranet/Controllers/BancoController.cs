@@ -19,7 +19,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] Banco respuestaBanco)
         {
-            return respuestaBanco.agregar_RespuestaBanco("Insertar") ? " Se guardó con éxito la respuesta del banco" : "No se guardó la respuesta del banco.";
+            return respuestaBanco.agregar_RespuestaBanco("Insertar") ? "Se guardó con éxito la respuesta del banco" : "No se guardó la respuesta del banco.";
 
         }
 

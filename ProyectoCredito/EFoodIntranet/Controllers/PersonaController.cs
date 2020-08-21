@@ -21,7 +21,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] Persona persona)
         {
-            return persona.agregar_persona("Insertar") ? " Se guardó con éxito la persona" : "No se guardaron los datos.";
+            return persona.agregar_persona("Insertar") ? "Se guardó con éxito la persona" : "No se guardaron los datos.";
 
         }
 

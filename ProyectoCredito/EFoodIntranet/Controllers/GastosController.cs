@@ -20,7 +20,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] Gastos gastos)
         {
-            return gastos.agregar_Gastos("Insertar") ? " Se guardaron los gastos" : "No se guardaron los gastos.";
+            return gastos.agregar_Gastos("Insertar") ? "Se guardaron los gastos" : "No se guardaron los gastos.";
 
         }
 
