@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Panel</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Principal.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Gestion de Creditos</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="Principal.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Principal</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Persona
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Datos personales</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Tus datos</h6>
+            <a class="collapse-item" href="VerDatosP.html">Ver mis datos personales</a>
+            <a class="collapse-item" href="Conyuge.html">No he registrado datos</a>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Bancos</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Utilities:</h6>
+            <a class="collapse-item" href="https://www.bncr.fi.cr/">Banco Nacional</a>
+            <a class="collapse-item" href="https://www.bancobcr.com/wps/portal/bcr/bancobcr/">Banco de Costa Rica</a>
+            <a class="collapse-item" href="https://www.bancopopular.fi.cr/Paginas/default.aspx">Banco Popular</a>
+            <a class="collapse-item" href="https://www.baccredomatic.com/es-cr">BAC</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Gestiones
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Mis Gestiones</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Procesos</h6>
+            <a class="collapse-item" href="popup.html">Gestionar un Credito
+            </a>
+            <a class="collapse-item" href="FormularioGestionVer.html">Ver mis Gestiones</a>
+        </div>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="#" id="salirBanco">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Salir</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <h1 class="h3 mb-0 text-gray-800">Principal</h1>
+            </div>
+          </form>
+       </nav>
+
+
+
+<!-- Los contendores de adentro -->
+        <div class="container-fluid">
+          <div class="row">
+             <div class="col-lg-12 mb-12">
+
+<!-------------------------------------------------------------------------------------------->
+        <div class="form-group">
+            <div class="row">
+                    <div class="col-md-6">
+
+                            <!-- Illustrations -->
+                        <div class="card shadow lg-8">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Información Personal</h6>
+                        </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                <div class="row">
+                                    <div class="col"><h3>Cedula:</h3></div>
+                                    <div class="col"><h3 id="CedVer"></h3></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col"><h3>Nombre:</h3></div>
+                                    <div class="col"><h3 id="Nom"></h3></div>
+                                </div>   
+                                
+                                <div class="row">
+                                    <div class="col"><h3>Telefono:</h3></div>
+                                    <div class="col"><h3 id="Tel"></h3></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col"><h3>Correo:</h3></div>
+                                    <div class="col"><h3 id="Correo"></h3></div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col"><h3>Nacionalidad:</h3></div>
+                                    <div class="col"><h3 id="Nacio"></h3></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col"><h3>Estado Civil:</h3></div>
+                                    <div class="col"><h3 id="Estado"></h3></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col"><h3>Residencia:</h3></div>
+                                    <div class="col"><h3 id="Residencia"></h3></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><h3>Direccion:</h3></div>
+                                    <div class="col"><h3 id="Direccion"></h3></div>
+                                </div>
+                                </div>
+                                <a target="_blank" rel="nofollow" href="UPIngresoDatosCLI.html">Click para actualizar su Información &rarr;</a>
+                            </div>
+                        </div>  
+                    </div>
+<!-------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------------------------->
+                    <div class="col-md-6">
+
+                        <!-- Illustrations -->
+                    <div class="card shadow lg-8">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Información Del Trabajo</h6>
+                    </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                            <div class="row">
+                                <div class="col"><h3>Nombre Trabajo:</h3></div>
+                                <div class="col"><h3 id="NombreTrabajo"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Nombre Compañia:</h3></div>
+                                <div class="col"><h3 id="NombreCompañia"></h3></div>
+                            </div>   
+                            
+                            <div class="row">
+                                <div class="col"><h3>Telefono:</h3></div>
+                                <div class="col"><h3 id="TelTrabajo"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Email:</h3></div>
+                                <div class="col"><h3 id="EmailTrabajo"></h3></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col"><h3>Residencia:</h3></div>
+                                <div class="col"><h3 id="ResidenciaTraba"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3></h3></div>
+                                <div class="col"><h3></h3></div>
+                                <div class="col"><h3></h3></div>
+                                <div class="col" style="color: white;"><h3>.</h3></div>
+                            </div>
+
+                            </div>
+                            <a target="_blank" rel="nofollow" href="UPTrabajosCLI.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                            <br>
+                               <a style="color: red;"  rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+<!-------------------------------------------Fin del primero------------------------------------------------->
+
+
+<!-------------------------------------------Inicio del segundo------------------------------------------------->
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- Approach -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Datos del Conyuge</h6>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col"><h3>Cedula:</h3></div>
+                            <div class="col"><h3 id="CedConyu"></h3></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col"><h3>Nombre:</h3></div>
+                            <div class="col"><h3 id="NomConyu"></h3></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col"><h3>Celular:</h3></div>
+                            <div class="col"><h3 id="CelConyu"></h3></div>
+                        </div>
+        
+                        <div class="row">
+                            <div class="col"><h3>Telefono Fijo:</h3></div>
+                            <div class="col"><h3 id="TelConyu"></h3></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col"><h3></h3></div>
+                            <div class="col"><h3></h3></div>
+                            <div class="col"><h3></h3></div>
+                            <div class="col" style="color: white;"><h3>.</h3></div>
+                        </div>
+                    </div>
+                    <a target="_blank" rel="nofollow" href="UPConyuge.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                     <br>
+                               <a style="color: red;"  rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                </div>
+            </div>
+        </div>  
+<!-------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------------------------->
+            <div class="col-md-6">
+
+                <!-- Approach -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Información de Otros Ingresos</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col"><h3>Otro Sueldo:</h3></div>
+                                <div class="col"><h3 id="OtroSueldo"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Bonos Comisiones:</h3></div>
+                                <div class="col"><h3 id="BonosComisiones"></h3></div>
+                            </div>   
+                            
+                            <div class="row">
+                                <div class="col"><h3>Renta:</h3></div>
+                                <div class="col"><h3 id="Renta"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Inversiones:</h3></div>
+                                <div class="col"><h3 id="Inversiones"></h3></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col"><h3>Otros Ingresos:</h3></div>
+                                <div class="col"><h3 id="OtrosIngresos"></h3></div>
+                            </div>
+
+                        </div>
+                        <a target="_blank" rel="nofollow" href="UPOtrosIngresos.htm">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                         <br>
+                               <a style="color: red;" rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                    </div>
+                </div>
+            </div>  
+    </div>
+</div>
+<!-------------------------------------Fin del Segundo------------------------------------------------------->
+
+<!-------------------------------------Inico del tercero------------------------------------------------------->
+<div class="form-group">
+    <div class="row">
+            <div class="col-md-6">
+
+                    <!-- Illustrations -->
+                <div class="card shadow lg-8">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Información De los Gastos</h6>
+                </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col"><h3>Prestamos:</h3></div>
+                            <div class="col"><h3 id="Prestamos"></h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"><h3>Facturacion Mensual:</h3></div>
+                            <div class="col"><h3 id="FacturacionMensual"></h3></div>
+                        </div>   
+                        
+                        <div class="row">
+                            <div class="col"><h3>Hipotecas:</h3></div>
+                            <div class="col"><h3 id="Hipotecas"></h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"><h3>Otros Gastos:</h3></div>
+                            <div class="col"><h3 id="OtrosGastos"></h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col" style="color: white;"><h3>.</h3></div>
+                        </div>
+
+                        </div>
+                        <a target="_blank" rel="nofollow" href="UPGastos.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                         <br>
+                               <a style="color: red;"  rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                    </div>
+                </div>  
+            </div>
+<!-------------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------------------------------->
+            <div class="col-md-6">
+
+                <!-- Approach -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Información de las Referencias Bancarias</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col"><h3>Institucion Bancaria:</h3></div>
+                                <div class="col"><h3 id="InstitucionBancaria"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Cuenta Corriente:</h3></div>
+                                <div class="col"><h3 id="CuentaCorriente"></h3></div>
+                            </div>   
+                            
+                            <div class="row">
+                                <div class="col"><h3>Caja Ahorros:</h3></div>
+                                <div class="col"><h3 id="CajaAhorros"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Prestamo:</h3></div>
+                                <div class="col"><h3 id="Prestamo"></h3></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col"><h3>Saldo Prestamo:</h3></div>
+                                <div class="col"><h3 id="SaldoPrestamo"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Direccion:</h3></div>
+                                <div class="col"><h3 id="DirecRefer"></h3></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col"><h3>Telefono:</h3></div>
+                                <div class="col"><h3 id="TelRefer"></h3></div>
+                            </div>
+                        </div>
+                        <a target="_blank" rel="nofollow" href="UPReferBancaria.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                         <br>
+                               <a style="color: red;" rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                    </div>
+                </div>
+            </div>  
+    </div>
+</div>
+<!----------------------------------------Fin del tercero---------------------------------------------------->
+
+<!-------------------------------------Inico del cuarto------------------------------------------------------->
+<div class="form-group">
+    <div class="row">
+            <div class="col-md-6">
+
+                    <!-- Illustrations -->
+                <div class="card shadow lg-8">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Información de las Tarjetas de Credito</h6>
+                </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col"><h3>Nombre Tarjeta:</h3></div>
+                            <div class="col"><h3 id="NomTarjeta"></h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"><h3>Numero Cuenta:</h3></div>
+                            <div class="col"><h3 id="NumCuentaTC"></h3></div>
+                        </div>   
+                        
+                        <div class="row">
+                            <div class="col"><h3>Saldo:</h3></div>
+                            <div class="col"><h3 id="SaldoTC"></h3></div>
+                        </div>
+
+                        </div>
+                        <a target="_blank" rel="nofollow" href="UPTcredito.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+
+                         <br>
+                               <a style="color: red;" rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                    </div>
+                </div>  
+            </div>
+<!-------------------------------------------------------------------------------------------->
+            <div class="col-md-6">
+
+                <div class="card shadow lg-8">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Puesto Trabajos</h6>
+                </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col"><h3>Sueldo Trabajador:</h3></div>
+                            <div class="col"><h3 id="SueldoPT"></h3></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"><h3>Fecha Ingreso:</h3></div>
+                            <div class="col"><h3 id="FechaIngresoPT"></h3></div>
+                        </div>   
+                        
+                        <div class="row">
+                            <div class="col"><h3>Puesto Trabajador:</h3></div>
+                            <div class="col"><h3 id="PuestoTrabajoPT"></h3></div>
+                        </div>
+
+                        </div>
+                        <a target="_blank" rel="nofollow" href="UPTrabajosMedia.html">Si ya ingresó datos actualícelos dando click acá &rarr;</a>
+                         <br>
+                               <a style="color: red;" rel="nofollow" href="Conyuge.html">Si nunca ha ingresado datos dele click acá &rarr;</a>
+                    </div>
+                </div>  
+            </div>         
+<!----------------------------------------Fin del cuarto---------------------------------------------------->
+
+        </div>
+      </div>
+    </div>
+<!-- Fin Los contendores de adentro -->
+  
+
+</div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
+
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script> -->
+  <script src="js/AppJS/VerDatosCli.js"></script>
+  <script src="js/AppJS/botonSalir.js"></script>
+
+</body>
+
+</html>
+<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>

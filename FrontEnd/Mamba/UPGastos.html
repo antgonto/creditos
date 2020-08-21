@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    />
+    <title>Gastos</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        color: #fff;
+        background: #4e73df;
+        font-family: "Roboto", sans-serif;
+      }
+      .form-control {
+        height: 40px;
+        box-shadow: none;
+        color: #969fa4;
+      }
+      .form-control:focus {
+        border-color: #5cb85c;
+      }
+      .form-control,
+      .btn {
+        border-radius: 3px;
+      }
+      .signup-form {
+        width: 450px;
+        margin: 0 auto;
+        padding: 30px 0;
+        font-size: 15px;
+      }
+      .signup-form h2 {
+        color: #636363;
+        margin: 0 0 15px;
+        position: relative;
+        text-align: center;
+      }
+      .signup-form h2:before,
+      .signup-form h2:after {
+        content: "";
+        height: 2px;
+        width: 30%;
+        background: #d4d4d4;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+      }
+      .signup-form h2:before {
+        left: 0;
+      }
+      .signup-form h2:after {
+        right: 0;
+      }
+      .signup-form .hint-text {
+        color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+      .signup-form form {
+        color: #999;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        background: #f2f3f7;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+      .signup-form .form-group {
+        margin-bottom: 20px;
+      }
+      .signup-form input[type="checkbox"] {
+        margin-top: 3px;
+      }
+      .signup-form .btn {
+        font-size: 16px;
+        font-weight: bold;
+        min-width: 140px;
+        outline: none !important;
+      }
+      .signup-form .row div:first-child {
+        padding-right: 10px;
+      }
+      .signup-form .row div:last-child {
+        padding-left: 10px;
+      }
+      .signup-form a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .signup-form a:hover {
+        text-decoration: none;
+      }
+      .signup-form form a {
+        color: #5cb85c;
+        text-decoration: none;
+      }
+      .signup-form form a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="logo float-left">
+          <h1 class="text-light">
+            <a href="index.html"><span>Mamba</span></a>
+          </h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="Principal.html">Inicio</a></li>
+            <li><a href="#" id="salirBanco">Salir</a></li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <div class="signup-form">
+      <form action="/examples/actions/confirmation.php" method="post">
+        <h2>GASTOS</h2>
+        <p class="hint-text">
+          En esta sección se requiere que usted como cliente ingresé todos los
+          datos de sus gastos, esto con el fin de poder recopilar la mayor
+          cantidad de información sobre usted. Esta información será utilizada
+          para qué en las gestiones de créditos los bancos pueden tener acceso a
+          información.
+        </p>
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="Prestasmos"
+            placeholder="Prestasmos"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            id="FacturacionMensual"
+            placeholder="Facturacion Mensual"
+          />
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" id="Hipotecas" placeholder="Hipotecas" />
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            id="OtrosGastos"
+            placeholder="Otros Gastos"
+          />
+        </div>
+
+        <div class="form-group" style="height: 70px;">
+          <button
+            type="submit"
+            id="GuardarDatos"
+            class="btn btn-success btn-lg btn-block"
+          >
+            Guardar Datos
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="js/AppJS/UPGastos.js"></script>
+    <script src="js/AppJS/botonSalir.js"></script>
+  </body>
+</html>
