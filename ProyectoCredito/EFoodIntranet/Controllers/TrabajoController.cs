@@ -20,7 +20,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] Trabajo trabajo)
         {
-            return trabajo.agregar_trabajo("Insertar") ? " Se guardó trabajo" : "No se guardó trabajo.";
+            return trabajo.agregar_trabajo("Insertar") ? "Se guardó trabajo" : "No se guardó trabajo.";
 
         }
 

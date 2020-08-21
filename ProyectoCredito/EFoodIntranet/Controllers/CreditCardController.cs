@@ -20,7 +20,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] CreditCard creditCard)
         {
-            return creditCard.agregar_creditcard("Insertar") ? " Se guardo la tarjeta" : "No se guardo tarjeta.";
+            return creditCard.agregar_creditcard("Insertar") ? "Se guardo la tarjeta" : "No se guardo tarjeta.";
 
         }
 

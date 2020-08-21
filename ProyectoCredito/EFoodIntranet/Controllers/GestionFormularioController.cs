@@ -8,7 +8,7 @@ using BLL;
 
 namespace EFoodIntranet.Controllers
 {
-    public class GestionFormularioController
+    public class GestionFormularioController : ApiController
     {
         public string Get(int id)
         {
@@ -19,7 +19,7 @@ namespace EFoodIntranet.Controllers
         // POST api/values      
         public string Post([FromBody] GestionFormulario gestionFormulario)
         {
-            return gestionFormulario.agregar_gestionformulario("Insertar") ? " Se guardo el formulario" : "No se guardo el formulario.";
+            return gestionFormulario.agregar_gestionformulario("Insertar") ? "Se guardo el formulario" : "No se guardo el formulario.";
 
         }
 

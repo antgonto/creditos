@@ -34,8 +34,8 @@ namespace BLL
             set { _Descripcion = value; }
         }
 
-        private byte _Planilla;
-        public byte Planilla
+        private string _Planilla;
+        public string Planilla
         {
             get { return _Planilla; }
             set { _Planilla = value; }
@@ -105,7 +105,7 @@ namespace BLL
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@ValorCredito", SqlDbType.Decimal, _Valor_Credito);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@PlazoCredito", SqlDbType.VarChar, _Plazo_Credito);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Descripcion", SqlDbType.VarChar, _Descripcion);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Planilla", SqlDbType.Bit, _Planilla);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Planilla", SqlDbType.VarChar, _Planilla);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Estado", SqlDbType.VarChar, _Estado);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Id_Persona", SqlDbType.Int, _Id_Persona);
                 cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
