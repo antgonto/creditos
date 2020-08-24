@@ -1,8 +1,8 @@
 # creditos
 Estudiantes:
-Karla López Mora
-Oscar Campos Espinoza
-Saeeth Azofeifa Zeledon
+Karla López Mora,
+Oscar Campos Espinoza,
+Saeeth Azofeifa Zeledon,
 Luis Montecinos Jimenez
 
 Sobre el proyecto
