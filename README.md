@@ -1,4 +1,5 @@
 # creditos
+Estudiantes:
 Karla López Mora
 Oscar Campos Espinoza
 Saeeth Azofeifa Zeledon
